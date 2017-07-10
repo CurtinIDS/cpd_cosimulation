@@ -4,9 +4,10 @@ Chemical Percolation Model for Coal Devolatization (CP..D) uses Arrhenius parame
 
 ---
 **USAGE**
+
 To train the neural net:
 * Run mycpd(*sample_size>1000,experimental R vs. t*)
 
 To predict:
-* Using mytest(*experimental R vs. t*) should return the three parameters - prexponent, activation energy, and standar deviation.
+* Using mytest(*experimental R vs. t*) should return the three parameters - prexponent, activation energy, and standard deviation.
 ---
