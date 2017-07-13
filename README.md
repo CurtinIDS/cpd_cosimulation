@@ -1,6 +1,6 @@
 # Predicting Arrhenius parameters from experiments
 
-Chemical Percolation Model for Coal Devolatization (CP..D) uses Arrhenius parameters to predict statistical reaction kinetics. This module does the opposite - given time evolved reaction rate data what would are the properties of the material?
+Chemical Percolation Model for Coal Devolatization (CP..D) uses Arrhenius parameters to predict statistical reaction kinetics. This module does the opposite - given time evolved reaction rate data what are the properties of the material?
 
 ---
 ##### **USAGE**
@@ -25,7 +25,7 @@ To predict:
   ```
 ###### Genetic/Particle swarm
 
-*Genetic
+**Genetic**
  ```matlab
    output=[];myvars=[];
    global output,myvars;
@@ -34,7 +34,7 @@ To predict:
    [n,args]=sort(-1*output); %Sort by fitness
   %myvars(args,:) should contain optimized params
 ```
-*Particle swarm
+**Particle swarm**
 ```matlab
   output=[];myvars=[];
   global output,myvars;
