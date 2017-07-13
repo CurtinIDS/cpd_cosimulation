@@ -25,7 +25,7 @@ To predict:
   ```
 ###### Genetic/Particle swarm
 
-**Genetic**
+###### Genetic
  ```matlab
    output=[];myvars=[];
    global output,myvars;
@@ -34,7 +34,7 @@ To predict:
    [n,args]=sort(-1*output); %Sort by fitness
   %myvars(args,:) should contain optimized params
 ```
-**Particle swarm**
+###### Particle swarm
 ```matlab
   output=[];myvars=[];
   global output,myvars;
