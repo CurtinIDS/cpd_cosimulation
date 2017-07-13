@@ -23,7 +23,7 @@ To predict:
   options=optimoptions('fminunc','Algorithm','trust-region','SpecifyObjectiveGradient',true,'OptimalityTolerance', 0.5e-5);
   [a,b]=fminunc(fun,INP,options);
   ```
-###### Genetic/Particle swarm
+###### Genetic/Particle swarm:
 
 ###### Genetic
  ```matlab
