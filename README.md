@@ -11,10 +11,11 @@ To train the neural net:
 To predict:
 * Using mytest(*experimental R vs. t*) should return the three parameters - prexponent, activation energy, and standar deviation.
 
+**In CPD.m, include the full path to CPD binary. In the same file, changes to 'cpdoutput' filename may be necessary**
 ###### Gradient Descent
-
+ 
   ```matlab
-  myvars=[];vars_cpd=[];output=[]; 
+  myvars=[];vars_cpd=[];output=[];
   global output,vars_cpd;
   INP=[3.1E15,6.1E4,0.81E4]'; %Starting guess
   exp1=csvread('your_exp_results');
@@ -28,18 +29,17 @@ To predict:
 ###### Genetic
  ```matlab
    output=[];myvars=[];
+   ga(@mygenetic,3,[],[],[],[],[1E14 5000 6000],[1E15 65000 10000]); %lower and upped bound search space values
    global output,myvars;
-   fun=@mygenetic;
-   ga(@fun,3,[],[],[],[],[1E14 5000 6000],[1E15 65000 10000]); %lower and upped bound search space values
    [n,args]=sort(-1*output); %Sort by fitness
   %myvars(args,:) should contain optimized params
 ```
 ###### Particle swarm
 ```matlab
   output=[];myvars=[];
-  global output,myvars;
-  particleswarm(fun,3,[1E14 40000 6000]',[1E15 65000 11000]); %Search space
+   particleswarm(@mygenetic,3,[1E14 40000 6000]',[1E15 65000 11000]); %Search space
   %On-completion:
+  global output,myvars;
   [n,args]=sort(-1*output); %Sort by fitness
   %myvars(args,:) should contain optimized params
 ```
